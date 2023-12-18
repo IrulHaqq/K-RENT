@@ -15,7 +15,8 @@
 </head>
 
 <body class="antialiased">
-    <div class="bg-white">
+    <div class="max-h-screen bg-white" style="background-image: url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg);">
+    <div class="hero-overlay absolute inset-0 bg-white" style="background-color: rgba(255, 255, 255, 0.9);"></div>
         <header class="absolute inset-x-0 top-0 z-50">
             <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div class="flex lg:flex-1">
@@ -54,10 +55,6 @@
                 </div>
             </div>
         </div>
-
-
     </div>
-
 </body>
-
 </html>
