@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\KendaraanController;
+use App\Http\Controllers\RentalController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,5 +29,19 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/kendaraan', [KendaraanController::class, 'index'])->name('kendaraan.index');
+Route::get('/mykendaraan', [KendaraanController::class, 'mykendaraan'])->name('kendaraan.mykendaraan');
+Route::get('/kendaraan/create', [KendaraanController::class, 'create'])->name('kendaraan.create');
+Route::post('/kendaraan/store', [KendaraanController::class, 'store'])->name('kendaraan.store');
+Route::get('/kendaraan/edit/{id}', [KendaraanController::class, 'edit'])->name('kendaraan.edit');
+Route::put('/kendaraan/update/{id}',[KendaraanController::class, 'update'])->name('kendaraan.update');
+Route::get('/kendaraan/detail/{id}',[KendaraanController::class, 'show'])->name('kendaraan.detail');
+Route::delete('/kendaraan/delete/{id}', [KendaraanController::class, 'destroy'])->name('kendaraan.destroy');
+
+Route::get('/rent', [RentalController::class, 'index'])->name('rental.index');
+Route::get('/rent/create/{id}', [RentalController::class, 'create'])->name('rental.create');
+Route::post('/rent/store/{id}', [RentalController::class, 'store'])->name('rental.store');
+
 
 require __DIR__.'/auth.php';
