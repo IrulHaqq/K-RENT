@@ -16,6 +16,21 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('kendaraan.index')" :active="request()->routeIs('kendaraan.index')">
+                        {{ __('Kendaraan') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('kendaraan.mykendaraan')" :active="request()->routeIs('kendaraan.mykendaraan')">
+                        {{ __('My Kendaraan') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('kendaraan.create')" :active="request()->routeIs('kendaraan.create')">
+                        {{ __('Add Kendaraan') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->
