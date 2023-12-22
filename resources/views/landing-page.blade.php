@@ -53,7 +53,7 @@
                         Rent your needed vehicle now,<br>
                         and create unforgettable travel moments with us.</p>
                     <div class="mt-10 flex items-center gap-x-6">
-                        <a href="{{ route('login') }}"
+                        <a href="{{ route('register') }}"
                             class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                             Rent now</a>
                         <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span
@@ -382,8 +382,8 @@
         <section>
 
             <section>
-                <div id=teams-section class="items-center w-full px-12 py-24 mx-auto md:px-12 lg:px-16 max-w-7xl">
-                    <h3 class="text-center py-12 text-2xl font-semibold tracking-tighter text-indigo-950">Our Teams</h3>
+                <div id=teams-section class="items-center w-full py-32 mx-auto md:px-12 lg:px-16 max-w-7xl">
+                    <h3 class="text-center mb-32 text-2xl font-semibold tracking-tighter text-indigo-950">Our Teams</h3>
                     <ul role="list"
                         class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-5">
                         <li>
