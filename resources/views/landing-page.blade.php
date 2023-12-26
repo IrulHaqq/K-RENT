@@ -37,7 +37,7 @@
                         onclick="scrollToSection('teams-section')">Teams</a>
                 </div>
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <a href="{{ route('login') }}" class="text-sm font-semibold leading-6 text-gray-900">Log in <span
+                    <a href="{{ route('register') }}" class="text-sm font-semibold leading-6 text-gray-900">Register <span
                             aria-hidden="true">&rarr;</span></a>
                 </div>
             </nav>
@@ -53,7 +53,7 @@
                         Rent your needed vehicle now,<br>
                         and create unforgettable travel moments with us.</p>
                     <div class="mt-10 flex items-center gap-x-6">
-                        <a href="{{ route('register') }}"
+                        <a href="{{ route('login') }}"
                             class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
                             Rent now</a>
                         <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span
