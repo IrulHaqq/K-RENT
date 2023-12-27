@@ -14,16 +14,18 @@ class KendaraanController extends Controller
      */
     public function index()
     {
-        //
-        $kendaraans = Kendaraan::all();
-       
+        $user = auth()->user();
+           
+        $kendaraans = Kendaraan::where('user_id',"!=", $user->id)->get();
+        
         return view('kendaraan.index', compact('kendaraans'));
     }
-
+    
     public function mykendaraan()
     {
         //
-        $kendaraans = Kendaraan::all();
+        $user = auth()->user();
+        $kendaraans = Kendaraan::where('user_id', $user->id)->get();
         
         return view('kendaraan.mykendaraan', compact('kendaraans'));
     }
@@ -51,7 +53,6 @@ class KendaraanController extends Controller
             'Harga_Kendaraan' => 'required|numeric',
             'Jumlah_Kendaraan' => 'required|numeric',
             'Deskripsi_Kendaraan' => 'required',
-            'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $kendaraan = new Kendaraan($request->all());
@@ -62,12 +63,10 @@ class KendaraanController extends Controller
             $images = $request->file('images');
 
             foreach ($images as $image) {
-                // Check if the file is valid
                 if ($image->isValid()) {
-                    $imagePath = $image->store('images', 'public'); // Change 'public'
+                    $imagePath = $image->store('images', 'public'); 
                     $kendaraan->images()->create(['image_path' => $imagePath]);
                 } else {
-                    // Handle the case where the file is not valid
                     return redirect()->back()->with('error', 'Invalid file uploaded.');
                 }
             }
@@ -124,7 +123,6 @@ class KendaraanController extends Controller
             'Harga_Kendaraan' => 'required|numeric',
             'Jumlah_Kendaraan' => 'required|numeric',
             'Deskripsi_Kendaraan' => 'required',
-            'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $kendaraan = Kendaraan::find($id);
@@ -142,7 +140,6 @@ class KendaraanController extends Controller
             $images = $request->file('images');
             
             foreach ($kendaraan->images as $image) {
-                // Assuming 'public' is your disk name, adjust if necessary
                 Storage::disk('public')->delete($image->image_path);
             }
             $kendaraan->images()->delete();
@@ -151,14 +148,15 @@ class KendaraanController extends Controller
             
             foreach ($images as $image) {
                 if ($image->isValid()) {
-                    $imagePath = $image->store('images', 'public'); // Change 'public'
+                    $imagePath = $image->store('images', 'public');
                     $kendaraan->images()->create(['image_path' => $imagePath]);
                 } else {
-                    // Handle the case where the file is not valid
                     return redirect()->back()->with('error', 'Invalid file uploaded.');
                 }
             }
-        } 
+        } else {
+            $kendaraan->update($request->all());
+        }
     
         return redirect()->route('kendaraan.mykendaraan')->with('success', 'Kendaraan updated successfully.');
     }
@@ -180,7 +178,6 @@ class KendaraanController extends Controller
         }
 
         foreach ($kendaraan->images as $image) {
-            // Assuming 'public' is your disk name, adjust if necessary
             Storage::disk('public')->delete($image->image_path);
         }
 

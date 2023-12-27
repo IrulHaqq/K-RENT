@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Rental extends Model
 {
-    protected $fillable = ['user_id', 'kendaraan_id', 'duration', 'additional_info', 'start_date', 'end_date', 'total_cost', 'status'];
+    protected $fillable = ['user_id', 'kendaraan_id', 'quantity', 'duration', 'additional_info', 'start_date', 'end_date', 'total_cost', 'status'];
 
     public function user()
     {
@@ -17,4 +17,10 @@ class Rental extends Model
     {
         return $this->belongsTo(Kendaraan::class);
     }
+
+    public function paymentDetails()
+    {
+        return $this->hasMany(PaymentDetail::class);
+    }
+
 }

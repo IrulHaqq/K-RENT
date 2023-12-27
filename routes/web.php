@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\KendaraanController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\RentalController;
 use Illuminate\Support\Facades\Route;
 
@@ -39,9 +40,13 @@ Route::put('/kendaraan/update/{id}',[KendaraanController::class, 'update'])->nam
 Route::get('/kendaraan/detail/{id}',[KendaraanController::class, 'show'])->name('kendaraan.detail');
 Route::delete('/kendaraan/delete/{id}', [KendaraanController::class, 'destroy'])->name('kendaraan.destroy');
 
-Route::get('/rent', [RentalController::class, 'index'])->name('rental.index');
+Route::get('/rent/{id}', [RentalController::class, 'index'])->name('rental.index');
 Route::get('/rent/create/{id}', [RentalController::class, 'create'])->name('rental.create');
-Route::post('/rent/store/{id}', [RentalController::class, 'store'])->name('rental.store');
+Route::post('/rent/update/{id}', [RentalController::class, 'update'])->name('rental.update');
+
+Route::get('/payment/{id}', [PaymentController::class, 'index'])->name('payment.index');
+Route::post('/payment/process/{rentalId}', [PaymentController::class, 'process'])->name('payment.process');
+Route::get('/payment/success', [PaymentController::class, 'success'])->name('payment.success');
 
 
 require __DIR__.'/auth.php';
