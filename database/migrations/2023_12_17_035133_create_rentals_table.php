@@ -12,12 +12,13 @@ class CreateRentalsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('kendaraan_id')->constrained()->onDelete('cascade');
-            $table->integer('duration');
-            $table->dateTime('start_date');
-            $table->dateTime('end_date');
-            $table->integer('quantity');
+            $table->integer('quantity')->nullable();
+            $table->dateTime('start_date')->nullable();
+            $table->dateTime('end_date')->nullable();
+            $table->integer('duration')->nullable();
             $table->text('additional_info')->nullable();
-            $table->decimal('total_cost', 8, 2);
+            $table->decimal('total_cost', 8, 2)->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }

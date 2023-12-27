@@ -48,7 +48,7 @@
     </div>
 
     <div class="mt-4 flex justify-center">
-        <a href="{{ route('rental.create', $kendaraan->id) }}" class="btn btn-neutral hover:btn-secondary transition duration-300 ease-in-out transform hover:-translate-y-1">Rent Now</a>
+        <a href="{{ route('rental.create', ['id'=>$kendaraan->id]) }}" class="btn btn-neutral hover:btn-secondary transition duration-300 ease-in-out transform hover:-translate-y-1">Rent Now</a>
     </div>
 </div>
 @endsection
