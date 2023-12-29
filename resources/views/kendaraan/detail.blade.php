@@ -21,7 +21,7 @@
                 @endforeach
             @else
                 <div class="carousel-item w-full">
-                    <img src="{{ asset('path/to/default/kendaraan_image.jpg') }}" class="rounded-box w-full h-64 object-cover" alt="Default kendaraan Image">
+                    <img src="{{ asset('storage/images/defaultimage.jpg') }}" class="rounded-box w-full h-64 object-cover" alt="Default kendaraan Image">
                 </div>
             @endif
         </div>
