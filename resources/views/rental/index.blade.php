@@ -12,37 +12,40 @@
             <h2 class="card-title text-2xl">Vehicle Name: {{ $rental->kendaraan->Nama_Kendaraan }}</h2>
             
             <div class="mb-4 mt-4">
-                <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                <label for="name" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
                 <input type="text" name="name" id="name" class="mt-1 p-2 w-full border rounded-md" value="{{ auth()->user()->name }}" disabled>
             </div>
             <div class="mb-4 flex">
             <div class="w-3/6">
-                <label for="start_date" class="block text-sm font-medium text-black">Start Date</label>
+                <label for="start_date" class="block text-sm font-medium text-black">Mulai Sewa</label>
                 <input type="date" name="start_date" id="start_date" value="{{ $rental->start_date }}" class="form-input mt-1 block w-full" required onchange="update()">
             </div>
             <div class="mb-4 w-3/6 pl-4">
-                <label for="end_date" class="block text-sm font-medium text-gray-700">End Date</label>
+                <label for="end_date" class="block text-sm font-medium text-gray-700">Akhir Sewa</label>
                 <input type="date" name="end_date" id="end_date" value="{{ $rental->end_date }}" class="form-input mt-1 block w-full" required onchange="update()">
             </div>
             </div>
             <div class="mb-4">
-                <label for="quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                <label for="quantity" class="block text-sm font-medium text-gray-700">Jumlah Kendaraan</label>
                 <input type="number" name="quantity" id="quantity" value="{{ $rental->quantity }}" class="form-input mt-1 block w-full" required onchange="update()">
             </div>
 
             <div class="mb-4">
-                <label for="additional_info" class="block text-sm font-medium text-gray-700">Additional Information</label>
+                <label for="additional_info" class="block text-sm font-medium text-gray-700">Informasi Tambahan</label>
                 <textarea name="additional_info" id="additional_info" class="form-textarea mt-1 block w-full" rows="3" required onchange="update()">{{ $rental->additional_info }}</textarea>
             </div>
 
             <div class="mb-4 mt-4">
-                <label for="duration" class="block text-sm font-medium text-gray-700">Duration (in days)</label>
+                <label for="duration" class="block text-sm font-medium text-gray-700">Total Durasi Sewa (Dalam Hari)</label>
                 <input type="number" name="duration" id="duration" value="{{ $rental->duration }}" class="form-input mt-1 block w-full" disabled>
             </div>
 
             <div class="mb-4">
-                <label for="total_cost" class="block text-sm text-2xl text-gray-700">Total Cost:</label>
-                <input type="number" name="total_cost" id="total_cost" value="{{ $rental->total_cost, 0, ',', '.'}}" class="form-input text-red-500 text-xl mt-1 block w-full border-0" disabled>
+                <label for="total_cost" class="block text-sm font-medium text-gray-700">Total Harga</label>
+                <div class="flex items-center">
+                    <span class="text-xl text-red-500">Rp.</span>
+                    <input type="number" name="total_cost" id="total_cost" value="{{ $rental->total_cost, 0, ',', '.' }}" class="form-input text-red-500 text-xl mt-1 block w-full border-0" disabled>
+                </div>
             </div>
         </form>
         <form action="{{ route('payment.index', ['id' => $rental->id]) }}" method="GET">

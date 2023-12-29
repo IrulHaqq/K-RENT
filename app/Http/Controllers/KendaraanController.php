@@ -9,13 +9,9 @@ use Illuminate\Support\Facades\Storage;
 
 class KendaraanController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        $user = auth()->user();
-           
+        $user = auth()->user();    
         $kendaraans = Kendaraan::where('user_id',"!=", $user->id)->get();
         
         return view('kendaraan.index', compact('kendaraans'));
@@ -23,30 +19,19 @@ class KendaraanController extends Controller
     
     public function mykendaraan()
     {
-        //
         $user = auth()->user();
         $kendaraans = Kendaraan::where('user_id', $user->id)->get();
         
         return view('kendaraan.mykendaraan', compact('kendaraans'));
     }
 
-    
-
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
         return view('kendaraan.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
         $request->validate([
             'Tipe_Kendaraan' => 'required',
             'Nama_Kendaraan' => 'required',
@@ -72,14 +57,10 @@ class KendaraanController extends Controller
             }
         }   
 
-
         return redirect()->route('kendaraan.mykendaraan')
             ->with('success', 'Kendaraan created successfully.');
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(string $id)
     {
         $kendaraan = Kendaraan::find($id);
@@ -89,16 +70,12 @@ class KendaraanController extends Controller
         }
 
         return view('kendaraan.detail', compact('kendaraan'));
-
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(string $id)
     {
-        //
         $kendaraans = Kendaraan::find($id);
+
         if (!$kendaraans) {
             return redirect()->route('kendaraan.mykendaraan')->with('error', 'Kendaraan not found.');
         }
@@ -108,15 +85,10 @@ class KendaraanController extends Controller
         }
     
         return view('kendaraan.edit', compact('kendaraans'));
-    
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, string $id)
     {
-        //
         $request->validate([
             'Tipe_Kendaraan' => 'required',
             'Nama_Kendaraan' => 'required',
@@ -134,16 +106,15 @@ class KendaraanController extends Controller
         if ($kendaraan->user_id != auth()->id()) {
             return redirect()->route('kendaraan.mykendaraan')->with('error', 'You do not have permission to edit this kendaraan.');
         }
-    
-        
+     
         if ($request->hasFile('images')) {
             $images = $request->file('images');
             
             foreach ($kendaraan->images as $image) {
                 Storage::disk('public')->delete($image->image_path);
             }
+
             $kendaraan->images()->delete();
-            
             $kendaraan->update($request->all());
             
             foreach ($images as $image) {
@@ -161,12 +132,8 @@ class KendaraanController extends Controller
         return redirect()->route('kendaraan.mykendaraan')->with('success', 'Kendaraan updated successfully.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(string $id)
     {
-        //
         $kendaraan = Kendaraan::find($id);
 
         if (!$kendaraan) {
@@ -184,6 +151,5 @@ class KendaraanController extends Controller
         $kendaraan->delete();
 
         return redirect()->route('kendaraan.mykendaraan')->with('success', 'Kendaraan deleted successfully.');
-
     }
 }
