@@ -17,7 +17,7 @@ class CreateRentalsTable extends Migration
             $table->dateTime('end_date')->nullable();
             $table->integer('duration')->nullable();
             $table->text('additional_info')->nullable();
-            $table->decimal('total_cost', 8, 2)->nullable();
+            $table->decimal('total_cost', 10, 2)->nullable();
             $table->string('status')->nullable();
             $table->timestamps();
         });
