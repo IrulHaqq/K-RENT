@@ -11,8 +11,7 @@ class PaymentController extends Controller
 {
     public function index($rentalId)
     {
-        $user = auth()->user();
-           
+        $user = auth()->user(); 
         $rentals = Rental::with('kendaraan')->where('user_id', $user->id)->where('id',$rentalId)->get();
 
         return view('payment.index', compact('rentals'));

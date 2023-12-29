@@ -10,8 +10,7 @@ class RentalController extends Controller
 {
     public function index($rental)
     {
-        $user = auth()->user();
-           
+        $user = auth()->user();  
         $rentals = Rental::with('kendaraan')->where('user_id', $user->id)->where('id',$rental)->get();
         
         return view('rental.index', compact('rentals'));
@@ -69,6 +68,5 @@ class RentalController extends Controller
             
             return redirect()->route('rental.index', ['id' => $rental->id])->with('success', 'Rental updated successfully');
         }
-
     }
 }

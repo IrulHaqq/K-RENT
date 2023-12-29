@@ -4,7 +4,7 @@
 <div class="container mx-auto p-5">
     <div class="flex items-center justify-between mb-4">
         <a href="{{ route('kendaraan.index') }}" class="btn btn-circle btn-neutral btn-outline hover:btn-primary transition duration-300 ease-in-out transform hover:-translate-y-1">❮</a>
-        <h1 class="text-3xl font-semibold text-gray-700 flex-grow text-center mr-12">Kendaraan Details</h1>   
+        <h1 class="text-3xl font-semibold text-gray-700 flex-grow text-center mr-12">Detail Kendaraan</h1>   
     </div>
     
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -37,15 +37,15 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
                     <div>
-                        <span class="font-semibold text-black">Type:</span>
+                        <span class="font-semibold text-black">Tipe Kendaraan:</span>
                         <span class="text-black">{{ $kendaraan->Tipe_Kendaraan }}</span>
                     </div>
                     <div>
-                        <span class="font-semibold text-black">Price:</span>
+                        <span class="font-semibold text-black">Harga Sewa per Hari:</span>
                         <span class="text-red-500">Rp. {{ number_format($kendaraan->Harga_Kendaraan, 0, ',', '.') }}</span>
                     </div>
                     <div>
-                        <span class="font-semibold text-black">Quantity Available:</span>
+                        <span class="font-semibold text-black">Jumlah Kendaraan Tersedia:</span>
                         <span class="text-success">{{ $kendaraan->Jumlah_Kendaraan }}</span>
                     </div>
                 </div>

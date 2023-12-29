@@ -1,4 +1,3 @@
-<!-- resources/views/kendaraan/mykendaraan.blade.php -->
 @extends('layouts.app')
 
 @section('content')

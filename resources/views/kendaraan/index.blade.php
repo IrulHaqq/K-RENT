@@ -1,4 +1,3 @@
-<!-- resources/views/kendaraan/index.blade.php -->
 @extends('layouts.app')
 
 @section('content')
@@ -41,7 +40,7 @@
                             <p class="text-black">{{ $kendaraan->Deskripsi_Kendaraan }}</p>
                             
                             <div class="mb-2 text-black">
-                                <strong>Jumlah Kendaraan:</strong> {{ $kendaraan->Jumlah_Kendaraan }}
+                                <strong>Jumlah Kendaraan Tersedia:</strong> {{ $kendaraan->Jumlah_Kendaraan }}
                             </div>
                             
                             <div class="card-actions justify-end mb-4">
