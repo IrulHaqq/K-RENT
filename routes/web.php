@@ -21,17 +21,13 @@ Route::get('/', function () {
     return view('landing-page');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/kendaraan', [KendaraanController::class, 'index'])->name('kendaraan.index');
+Route::get('/kendaraan', [KendaraanController::class, 'index'])->middleware(['auth','verified'])->name('kendaraan.index');
 Route::get('/mykendaraan', [KendaraanController::class, 'mykendaraan'])->name('kendaraan.mykendaraan');
 Route::get('/kendaraan/create', [KendaraanController::class, 'create'])->name('kendaraan.create');
 Route::post('/kendaraan/store', [KendaraanController::class, 'store'])->name('kendaraan.store');
