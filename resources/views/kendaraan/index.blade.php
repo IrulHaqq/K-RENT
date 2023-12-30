@@ -5,11 +5,9 @@
         <!-- Search box -->
         <div class="flex items-center justify-center mb-4">
             <div class="flex w-full justify-center">
-                <!-- <form action="{{ route('search') }}" method="GET" class="flex w-full justify-center"> -->
                 <form action="/search" method="GET" class="flex w-full justify-center">
                 @csrf
                 <input type="text" name="query" placeholder="Mau rental apa hari ini?" class="p-3 text-black border border-gray-300 rounded-l-md w-full sm:w-2/3 md:w-1/2 lg:w-2/3 xl:w-3/4 shadow-md focus:outline-none">
-                <!-- Fungsi untuk search! -->
                 <button class="bg-black text-white font-bold py-3 px-4 rounded-r-md hover:bg-gray-900 transition duration-300 ease-in-out">
                     Search
                 </button>

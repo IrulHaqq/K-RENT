@@ -16,11 +16,15 @@
                 
                     <div class="card card-compact bg-gray-200 shadow-xl">
                         <div class="w-full h-64 overflow-hidden">
-                            @if (!is_null($result->images) && $result->images->count() > 0 && !is_null($result->images[0]->image_path))
-                                <img src="{{ asset('storage/' . $result->images[0]->image_path) }}" class="w-full h-full object-cover" alt="Kendaraan Image">
-                            @else
-                                <img src="{{ asset('storage/images/defaultimage.jpg') }}" class="w-full h-full object-cover" alt="Default Image">
-                            @endif
+                            @foreach ($result->images as $index => $image)
+                            <div id ="carousel-{{ $result->id }}-{{ $index }}" class="carousel-item w-full relative">
+                                <img src="{{ asset('storage/' . $image->image_path) }}" class="rounded-box w-full h-64 object-cover" alt="Kendaraan Image">
+                                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                                    <a href="#carousel-{{ $result->id }}-{{ $index - 1 }}" class="btn btn-circle btn-ghost hover:btn-secondary transition duration-300 ease-in-out transform hover:-translate-y-1">❮</a> 
+                                    <a href="#carousel-{{ $result->id }}-{{ $index + 1}}" class="btn btn-circle btn-ghost hover:btn-secondary transition duration-300 ease-in-out transform hover:-translate-y-1">❯</a>
+                                </div>
+                            </div>
+                            @endforeach
                         </div>
                         <div class="card-body p-4">
                             @if (!is_null($result->Nama_Kendaraan))
