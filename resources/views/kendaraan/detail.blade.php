@@ -42,6 +42,7 @@
                     </div>
                     <div>
                         <span class="font-semibold text-black">Harga Sewa per Hari:</span>
+                        <br>
                         <span class="text-red-500">Rp. {{ number_format($kendaraan->Harga_Kendaraan, 0, ',', '.') }}</span>
                     </div>
                     <div>
