@@ -227,30 +227,30 @@
         <!-- REVIEWS -->
         <section id="reviews-section" class="bg-gray-100 sm:py-24 mx-auto md:px-4">
             <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <h3 class="text-center py-12 text-2xl font-semibold tracking-tighter text-indigo-950">What they said
+                <h3 class="text-center py-12 text-3xl font-semibold tracking-tighter text-indigo-950">Reviews
                 </h3>
                 <ul role="list" class="grid max-w-2xl grid-cols-1 gap-6 mx-auto sm:gap-8 lg:max-w-none lg:grid-cols-3">
-                    <li>
+                <li>
                         <ul role="list" class="flex flex-col gap-y-6 sm:gap-y-8">
                             <li>
                                 <figure class="relative h-full p-6 bg-white rounded-3xl">
                                     <blockquote class="relative">
                                         <p class="text-base text-gray-500">
-                                            Snowflake is a cloud data platform that enables data storage,
-                                            processing, and analytics solutions for businesses.
+                                            "Website yang sangat membantu Mahasiswa dalam pencarian
+                                            rental kendaraan dan sangat bermanfaat sekali."
                                         </p>
                                     </blockquote>
                                     <figcaption class="relative flex items-center justify-between pt-6 mt-6 border-t border-gray-100">
                                         <div>
                                             <div class="text-base text-black">
-                                                Annur Flint
+                                                Winter
                                             </div>
                                             <div class="mt-1 text-sm text-gray-500">
-                                                CEO at Flint LLC
+                                                Member of AESPA
                                             </div>
                                         </div>
                                         <div class="overflow-hidden rounded-full bg-gray-50">
-                                            <img alt="" src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80" width="56" height="56" decoding="async" data-nimg="future" class="object-cover h-14 w-14" loading="lazy" style="color: transparent">
+                                            <img alt="" src="{{ asset('images/Winter.jpg') }}" width="56" height="56" decoding="async" data-nimg="future" class="object-cover h-14 w-14" loading="lazy" style="color: transparent">
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -263,21 +263,102 @@
                                 <figure class="relative h-full p-6 bg-white rounded-3xl">
                                     <blockquote class="relative">
                                         <p class="text-base text-gray-500">
-                                            Upswing securities passively index inverse bondholders
-                                            capitalization financial health Moody's debt managed.
+                                            "Website nya gila brokk!!!, Sangat membantu kalangan mahasiswa cuy.
+                                            Jangan lupa membership di youtube saya!."
                                         </p>
                                     </blockquote>
                                     <figcaption class="relative flex items-center justify-between pt-6 mt-6 border-t border-gray-100">
                                         <div>
                                             <div class="text-base text-black">
-                                                Oliver Benji
+                                                Aldean Tegar
                                             </div>
                                             <div class="mt-1 text-sm text-gray-500">
-                                                Founder of Benji and Tom
+                                                ex-VP of EVOS Esport
                                             </div>
                                         </div>
                                         <div class="overflow-hidden rounded-full bg-gray-50">
-                                            <img alt="" src="https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1999&amp;q=80" width="56" height="56" decoding="async" data-nimg="future" class="object-cover h-14 w-14" loading="lazy" style="color: transparent">
+                                            <img alt="" src="{{ asset('images/Dean.jpg') }}" width="56" height="56" decoding="async" data-nimg="future" class="object-cover h-14 w-14" loading="lazy" style="color: transparent">
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul role="list" class="flex flex-col gap-y-6 sm:gap-y-8">
+                            <li>
+                                <figure class="relative h-full p-6 bg-white rounded-3xl">
+                                    <blockquote class="relative">
+                                        <p class="text-base text-gray-500">
+                                            "Website bagus banget, membantu teman saya dalam mencari
+                                            kendaraan. Terima kasih buat yang sudah buat website ini."
+                                        </p>
+                                    </blockquote>
+                                    <figcaption class="relative flex items-center justify-between pt-6 mt-6 border-t border-gray-100">
+                                        <div>
+                                            <div class="text-base text-black">
+                                                Michelle Alexandra
+                                            </div>
+                                            <div class="mt-1 text-sm text-gray-500">
+                                                Member of JKT48
+                                            </div>
+                                        </div>
+                                        <div class="overflow-hidden rounded-full bg-gray-50">
+                                            <img alt="" src="{{ asset('images/Michie.jpg') }}" width="56" height="56" decoding="async" data-nimg="future" class="object-cover h-14 w-14" loading="lazy" style="color: transparent">
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul role="list" class="flex flex-col gap-y-6 sm:gap-y-8">
+                            <li>
+                                <figure class="relative h-full p-6 bg-white rounded-3xl">
+                                    <blockquote class="relative">
+                                        <p class="text-base text-gray-500">
+                                            "Inovasi yang brillian, sangat membantu saya dan rekan
+                                            saya dalam mencari kendaraan ketika sedang di luar kota."
+                                        </p>
+                                    </blockquote>
+                                    <figcaption class="relative flex items-center justify-between pt-6 mt-6 border-t border-gray-100">
+                                        <div>
+                                            <div class="text-base text-black">
+                                                Kairi
+                                            </div>
+                                            <div class="mt-1 text-sm text-gray-500">
+                                                Pro Player of Onic Esport
+                                            </div>
+                                        </div>
+                                        <div class="overflow-hidden rounded-full bg-gray-50">
+                                            <img alt="" src="{{ asset('images/kairi.jpg') }}" width="56" height="56" decoding="async" data-nimg="future" class="object-cover h-14 w-14" loading="lazy" style="color: transparent">
+                                        </div>
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul role="list" class="flex flex-col gap-y-6 sm:gap-y-8">
+                            <li>
+                                <figure class="relative h-full p-6 bg-white rounded-3xl">
+                                    <blockquote class="relative">
+                                        <p class="text-base text-gray-500">
+                                            Website nya keren bangett!!!, Sangat membantu saya dalam
+                                            mencari kendaraan. Terima kasih kepada Abiyoga!!!
+                                        </p>
+                                    </blockquote>
+                                    <figcaption class="relative flex items-center justify-between pt-6 mt-6 border-t border-gray-100">
+                                        <div>
+                                            <div class="text-base text-black">
+                                                Angelina Christy
+                                            </div>
+                                            <div class="mt-1 text-sm text-gray-500">
+                                                Member of JKT48
+                                            </div>
+                                        </div>
+                                        <div class="overflow-hidden rounded-full bg-gray-50">
+                                            <img alt="" src="{{ asset('images/Christy.jpg') }}" width="56" height="56" decoding="async" data-nimg="future" class="object-cover h-14 w-14" loading="lazy" style="color: transparent">
                                         </div>
                                     </figcaption>
                                 </figure>
@@ -312,6 +393,7 @@
                         </ul>
                     </li>
                 </ul>
+                
             </div>
         </section>
         <!-- TEAMS -->
@@ -319,12 +401,12 @@
 
             <section>
                 <div id=teams-section class="items-center w-full py-32 mx-auto md:px-12 lg:px-16 max-w-7xl">
-                    <h3 class="text-center mb-32 text-2xl font-semibold tracking-tighter text-indigo-950">Our Teams</h3>
-                    <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-5">
+                    <h3 class="text-center mb-32 text-3xl font-bold tracking-tighter text-indigo-950">Our Teams</h3>
+                    <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-0 sm:gap-y-0 sm:space-y-0 lg:grid-cols-5">
                         <li>
                             <div class="space-y-4">
                                 <div class="aspect-[3/2]">
-                                    <img class="object-cover w-full h-full" src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80" alt="">
+                                    <img class="object-cover h-full" src="{{ asset('images/Stev.png') }}" alt="">
                                 </div>
                                 <div class="inline-flex items-start justify-between w-full">
                                     <div class="space-y-1">
@@ -335,30 +417,13 @@
                                             Project Manager
                                         </p>
                                     </div>
-                                    <div>
-                                        <ul role="list" class="flex space-x-5">
-                                            <li>
-                                                <a href="#" class="text-gray-400 hover:text-gray-500">
-                                                    <ion-icon name="logo-dribbble" role="img" class="md hydrated" aria-label="logo dribbble"></ion-icon>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="text-gray-400 hover:text-gray-500">
-                                                    <span class="sr-only">
-                                                        Twitter
-                                                    </span>
-                                                    <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li>
-                            <div class="space-y-4">
+                            <div class="space-y-5">
                                 <div class="aspect-[3/2]">
-                                    <img class="object-cover w-full h-full" src="https://images.unsplash.com/photo-1602434228300-a645bce6891b?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1639&amp;q=80" alt="">
+                                    <img class="object-cover h-full" src="{{ asset('images/Dandy.png') }}" alt="">
                                 </div>
                                 <div class="inline-flex items-start justify-between w-full">
                                     <div class="space-y-1">
@@ -369,30 +434,13 @@
                                             UI & UX Designer
                                         </p>
                                     </div>
-                                    <div>
-                                        <ul role="list" class="flex space-x-5">
-                                            <li>
-                                                <a href="#" class="text-gray-400 hover:text-gray-500">
-                                                    <ion-icon name="logo-dribbble" role="img" class="md hydrated" aria-label="logo dribbble"></ion-icon>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="text-gray-400 hover:text-gray-500">
-                                                    <span class="sr-only">
-                                                        Twitter
-                                                    </span>
-                                                    <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="space-y-4">
                                 <div class="aspect-[3/2]">
-                                    <img class="object-cover w-full h-full" src="https://images.unsplash.com/photo-1577202214328-c04b77cefb5d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2073&amp;q=80" alt="">
+                                    <img class="object-cover h-full" src="{{ asset('images/fahru.jpg') }}" alt="">
                                 </div>
                                 <div class="inline-flex items-start justify-between w-full">
                                     <div class="space-y-1">
@@ -403,30 +451,13 @@
                                             Frontend Developer
                                         </p>
                                     </div>
-                                    <div>
-                                        <ul role="list" class="flex space-x-5">
-                                            <li>
-                                                <a href="#" class="text-gray-400 hover:text-gray-500">
-                                                    <ion-icon name="logo-dribbble" role="img" class="md hydrated" aria-label="logo dribbble"></ion-icon>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="text-gray-400 hover:text-gray-500">
-                                                    <span class="sr-only">
-                                                        Twitter
-                                                    </span>
-                                                    <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="space-y-4">
                                 <div class="aspect-[3/2]">
-                                    <img class="object-cover w-full h-full" src="https://images.unsplash.com/photo-1577202214328-c04b77cefb5d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2073&amp;q=80" alt="">
+                                    <img class="object-cover h-full" src="{{ asset('images/andi.png') }}" alt="">
                                 </div>
                                 <div class="inline-flex items-start justify-between w-full">
                                     <div class="space-y-1">
@@ -437,30 +468,13 @@
                                             Frontend Developer
                                         </p>
                                     </div>
-                                    <div>
-                                        <ul role="list" class="flex space-x-5">
-                                            <li>
-                                                <a href="#" class="text-gray-400 hover:text-gray-500">
-                                                    <ion-icon name="logo-dribbble" role="img" class="md hydrated" aria-label="logo dribbble"></ion-icon>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="text-gray-400 hover:text-gray-500">
-                                                    <span class="sr-only">
-                                                        Twitter
-                                                    </span>
-                                                    <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li>
                             <div class="space-y-4">
                                 <div class="aspect-[3/2]">
-                                    <img class="object-cover w-full h-full" src="https://images.unsplash.com/photo-1577202214328-c04b77cefb5d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2073&amp;q=80" alt="">
+                                    <img class="object-cover h-full" src="{{ asset('images/abi.jpeg') }}" alt="">
                                 </div>
                                 <div class="inline-flex items-start justify-between w-full">
                                     <div class="space-y-1">
@@ -470,23 +484,6 @@
                                         <p class="text-base text-gray-500">
                                             Backend Developer
                                         </p>
-                                    </div>
-                                    <div>
-                                        <ul role="list" class="flex space-x-5">
-                                            <li>
-                                                <a href="#" class="text-gray-400 hover:text-gray-500">
-                                                    <ion-icon name="logo-dribbble" role="img" class="md hydrated" aria-label="logo dribbble"></ion-icon>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="text-gray-400 hover:text-gray-500">
-                                                    <span class="sr-only">
-                                                        Twitter
-                                                    </span>
-                                                    <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
-                                                </a>
-                                            </li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
