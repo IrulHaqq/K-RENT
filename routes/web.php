@@ -5,6 +5,7 @@ use App\Http\Controllers\KendaraanController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\RentalController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,5 +49,7 @@ Route::get('/payment/{id}', [PaymentController::class, 'index'])->name('payment.
 Route::post('/payment/process/{rentalId}', [PaymentController::class, 'process'])->name('payment.process');
 Route::get('/payment/success', [PaymentController::class, 'success'])->name('payment.success');
 
+Route::get('/kendaraan/search', [SearchController::class, 'index']);
+Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 require __DIR__.'/auth.php';
